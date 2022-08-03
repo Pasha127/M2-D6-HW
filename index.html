@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+       
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         
     </head>
     <body>
@@ -26,7 +27,7 @@
                         <a class="nav-link" href="#featured">Featured Album</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#wall">Wall of Glory</a>
+                        <a class="nav-link" href="#wallButton">Wall of Glory</a>
                     </li>
                 </ul>
             </div>
@@ -174,8 +175,14 @@
 </div>
 </div>
 
-<a class="btn btn-primary mt-5 mb-4" data-toggle="collapse" href="#wall" role="button" aria-expanded="false" aria-controls="wall">Witness Glory
-</a>
+
+
+<div class="container d-flex justify-content-center my-5">
+    <button class="btn btn-primary" type="button" id="wallButton" data-toggle="collapse" data-target="#wall" aria-expanded="false" aria-controls="wall">
+        Witness Glory
+      </button>
+</div>
+
 <div class="container collapse" id="wall">
     <h2>Wall of Glory</h2>
     <div class="row">
@@ -210,6 +217,8 @@
         <img class="col-xl-2 col-l-3 col-md-4 col-sm-6 col-12 p-0" src="https://i.pinimg.com/236x/00/04/cc/0004cc409cc7020cecbcfcb8139cb1fd--all-video-spongebob-squarepants.jpg" alt="">
         <img class="col-xl-2 col-l-3 col-md-4 col-sm-6 col-12 p-0" src="https://images.genius.com/2d1a21169394a416d8030f9c5bd4a774.480x360x1.jpg" alt="">
     </div>
+</div>
+</div>
 </div>
 
 <footer class="text-center text-lg-start bg-light text-muted">
@@ -289,7 +298,7 @@
     
     
 </footer>
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 </body>
 </html>
