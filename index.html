@@ -7,7 +7,51 @@
         <title>Document</title>
        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        
+        <style>
+            .jumbotron{
+                width: 60%;
+            }
+            .record{
+                
+                position: absolute;
+                animation: rotate 3s both linear infinite;                
+            }            
+            .recordIn{
+                position: absolute;
+                
+                animation: rotateIn 4s both ease-in 1s;
+
+            }
+            .recordContainer{
+                position: relative;
+                justify-content: center;
+                align-items: center;
+            }            
+            .jContainer{
+                position: absolute;
+                z-index: 1;
+                height: 100vh;
+                width: 100vw;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                background-color: white;
+            }
+            @keyframes rotate {
+                0%  {-webkit-transform: rotate(0deg);
+                    height: 100%;}
+	            100% {-webkit-transform: rotate(360deg);
+                height: 100%;}
+            }
+            @keyframes rotateIn {
+                0%  {-webkit-transform: rotate(0deg);                    
+                    height: 100%;
+                    transform: translate(0px,0px);}
+                50%{-webkit-transform: rotate(360deg);}
+                100% {  height:1000%;                        
+                        transform: translate(-1vh,-1vw);}
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark ">
@@ -32,8 +76,20 @@
                 </ul>
             </div>
         </nav>
-        
-        
+        <div class="jContainer" >
+        <div class="jumbotron row">
+            <div class="col-6">
+                <h1 class="display-4">Hello, Music Lovers!</h1>
+                <p class="lead">Are you interested in hearing the hottest tracks?   </p>
+                <hr class="my-4">
+                <p>Enter here to feast your ears.</p>
+                <a class="btn btn-primary btn-lg enterButton" href="#" role="button">Enter</a>
+            </div>
+            <div class="col-6 recordContainer">
+                <img class="record" id="record" src="./vinyl-record-svgrepo-com.svg" alt="record">
+            </div>
+        </div>
+        </div>
         
         <div class="container border mt-5" id="favs">
             <h2>Favs:</h2>
@@ -300,5 +356,13 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script>
+    const record = document.querySelector(".record");
+    const enterButton = document.querySelector(".enterButton");
+    enterButton.onclick = function (){
+        record.classList.remove("record");
+        record.classList.add("recordIn");
+    }
+</script>
 </body>
 </html>
