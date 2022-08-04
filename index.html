@@ -8,18 +8,47 @@
        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <style>
+            @media (max-width:649px)  {
+            nav.navbar{
+                visibility: visible!important;                
+            }
+            .enterButton{
+                display: none;
+            }
+            @keyframes rotate {
+                0%  {-webkit-transform: rotate(0deg);
+                    height: 100%;}
+                100% {-webkit-transform: rotate(360deg);
+                height: 100%;}
+            }
+            .record{
+                
+                position: absolute;
+                animation: rotate 1s both linear infinite;                
+            }      
+        }
+        @media (max-width:327px)  {
+            .record{
+                visibility: hidden;
+            }
+
+        }
+            
+            @media (min-width:650px)  {
+                
+            
             .jumbotron{
                 width: 60%;
             }
             .record{
                 
                 position: absolute;
-                animation: rotate 3s both linear infinite;                
+                animation: rotate 1s both linear infinite;                
             }            
             .recordIn{
                 position: absolute;
                 
-                animation: rotateIn 4s both ease-in 1s;
+                animation: rotateIn 4s both ease-in;
 
             }
             .recordContainer{
@@ -37,24 +66,111 @@
                 display: flex;
                 background-color: white;
             }
+            .fade-in-item { animation: fadeIn 1s; }
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+            .fade-out-item { animation: fadeOut forwards 1s; }
+            @keyframes fadeOut {
+                0% { opacity: 1; }
+                100% { opacity: 0; }
+            }
             @keyframes rotate {
                 0%  {-webkit-transform: rotate(0deg);
                     height: 100%;}
-	            100% {-webkit-transform: rotate(360deg);
+                100% {-webkit-transform: rotate(360deg);
                 height: 100%;}
             }
             @keyframes rotateIn {
-                0%  {-webkit-transform: rotate(0deg);                    
+                0%  {-webkit-transform: rotate(0deg);
                     height: 100%;
-                    transform: translate(0px,0px);}
-                50%{-webkit-transform: rotate(360deg);}
-                100% {  height:1000%;                        
-                        transform: translate(-1vh,-1vw);}
+                    transform: translate(0px,0px);
+                    opacity: 1;}
+                20%{-webkit-transform: rotate(-270deg);
+                    opacity: 1;}
+                99%{visibility: visible;
+                    opacity: 1;}
+                100% {
+                    -webkit-transform: rotate(-360deg);
+                        transform: scale(300.0);
+                        height: 100%;
+                        visibility: hidden;
+                        opacity: 0;
+                        }
             }
+        }
+            @media (min-width:1534px)  {
+                
+            
+            .jumbotron{
+                width: 55%;
+            }
+            .record{
+                
+                position: absolute;
+                animation: rotate 1s both linear infinite;                
+            }            
+            .recordIn{
+                position: absolute;
+                
+                animation: rotateIn 4s both ease-in;
+
+            }
+            .recordContainer{
+                position: relative;
+                justify-content: center;
+                align-items: center;
+            }            
+            .jContainer{
+                position: absolute;
+                z-index: 1;
+                height: 100vh;
+                width: 100vw;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                background-color: white;
+            }
+            .fade-in-item { animation: fadeIn 1s; }
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+            .fade-out-item { animation: fadeOut forwards 1s; }
+            @keyframes fadeOut {
+                0% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+            @keyframes rotate {
+                0%  {-webkit-transform: rotate(0deg);
+                    height: 100%;}
+                100% {-webkit-transform: rotate(360deg);
+                height: 100%;}
+            }
+            @keyframes rotateIn {
+                0%  {-webkit-transform: rotate(0deg);
+                    height: 100%;
+                    transform: translate(0px,0px);
+                    opacity: 1;}
+                20%{-webkit-transform: rotate(-270deg);
+                    opacity: 1;}
+                99%{visibility: visible;
+                    opacity: 1;}
+                100% {
+                    -webkit-transform: rotate(-360deg);
+                        transform: scale(300.0);
+                        height: 100%;
+                        visibility: hidden;
+                        opacity: 0;
+                        }
+            }
+        }
+
         </style>
     </head>
-    <body>
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark ">
+    <body class="overflow-hidden">
+        <nav class="invisible navbar sticky-top navbar-expand-lg navbar-dark bg-dark ">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -86,7 +202,7 @@
                 <a class="btn btn-primary btn-lg enterButton" href="#" role="button">Enter</a>
             </div>
             <div class="col-6 recordContainer">
-                <img class="record" id="record" src="./vinyl-record-svgrepo-com.svg" alt="record">
+                <img class="record" id="record" src="./vinyl-svgrepo-com.svg" alt="record">
             </div>
         </div>
         </div>
@@ -96,7 +212,7 @@
             <div class="row">
                 <div class="col-xl-2 col-l-3 col-md-4 col-sm-6 col-12">
                     <div class="card" style="width: 100%;">
-                        <img class="card-img-top" src="https://cdn.myshoptet.com/usr/www.cd-hudba.cz/user/shop/big/1456150_daft-punk-random-access-memories--cd-.jpg" alt="R.A.M. image">
+                        <img class="card-img-top" src="https://i.pinimg.com/originals/86/7c/5f/867c5fcbaac0e41e10bd2de274d8233c.jpg" alt="R.A.M. image">
                         <div class="card-body">
                             <h5 class="card-title">Random Access Memories</h5>
                             <h3 class="card-title">Daft Punk</h3>
@@ -210,7 +326,7 @@
     <div class="row">
         <div class="col-12">
             <div class="card" style="width: 100%;">
-                <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/en/1/1c/Autobahn-kraftwerk-cover.jpg" alt="autobahn image">
+                <img class="card-img-top" src="https://m.media-amazon.com/images/I/71MjJL+0-AL._SL1500_.jpg" alt="autobahn image">
                 <div class="card-body">
                     <h5 class="card-title">Autobahn</h5>
                     <h3 class="card-title">Kraftwerk</h3>
@@ -359,9 +475,24 @@
 <script>
     const record = document.querySelector(".record");
     const enterButton = document.querySelector(".enterButton");
+    const jumbotron = document.querySelector(".jumbotron");
+    const body = document.querySelector("body");
+    const jContainer = document.querySelector(".jContainer");
+    const nav = document.querySelector("nav");
+    const hideJumbo = function(){
+        //body.classList.remove("overflow-hidden");
+        //nav.classList.remove("invisible");
+        //jContainer.classList.add("invisible");
+    }
+    const fadeOut = function(){
+        jContainer.classList.add("fade-out-item");
+    }
+
     enterButton.onclick = function (){
         record.classList.remove("record");
         record.classList.add("recordIn");
+        setTimeout(fadeOut, 1500)
+        setTimeout(hideJumbo, 1500);
     }
 </script>
 </body>
