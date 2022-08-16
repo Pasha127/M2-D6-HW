@@ -7,6 +7,7 @@
         <title>Document</title>
        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/2694a4f664.js" crossorigin="anonymous"></script>
         <style>
             .removeRowButton{
                 cursor: pointer;
@@ -57,6 +58,9 @@
                 
                 position: absolute;
                 animation: rotate 1s both linear infinite;                
+            }
+            body.overflow-hidden{
+                overflow-y: scroll!important;
             }      
         }
         @media (max-width:327px)  {
@@ -64,7 +68,9 @@
                 visibility: hidden;
             }
 
+
         }
+        
             
             @media (min-width:650px)  {
                 
@@ -198,7 +204,33 @@
                         }
             }
         }
+        .btn:hover{
+            box-shadow: 0px 8px 10px -2px rgba(0, 0, 0, 0.658);
+            transform: translateY(-10%);
+            scale: 1.1;
+            transition: transform .1s ease-in;
+            transition: scale .1s ease-in;
+        }
+        tr button{
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            -webkit-transition: opacity .3s ease-in-out;
+            
+        }
+        body:hover tr button{
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            -webkit-transition: opacity .3s ease-in-out;
+            
 
+        }
+        tr:hover button.btn.btn-danger{
+            opacity: 1;
+            transition: opacity .3s ease-in-out;
+            -webkit-transition: opacity .3s ease-in-out;
+            
+        } 
+        
         </style>
     </head>
     <body class="overflow-hidden">
@@ -254,11 +286,11 @@
                 <th scope="col">Artist</th>
                 <th scope="col">Duration</th>
                 <th scope="col">Listen</th>
-                <th scope="col">Delete Track</th>
+                <th scope="col"></th>
               </tr>
             </thead>
             <tbody >
-                <tr >
+                <tr>
                     <th class="col-1 align-middle" scope="row">1</th>
                     <td class="col-2 align-middle">Papaoutai</td>
                     <td class="col-2 align-middle">Stromae</td>
@@ -267,155 +299,155 @@
                     <td class="col-1 align-middle "><button type="button" class="btn btn-danger removeRowButton">X</button></td>
                 </tr>
               <tr>
-                <th class="align-middle"scope="row">2</th>
-                <td class="align-middle">Wolf Totem</td>
-                <td class="align-middle">The Hu</td>
-                <td class="align-middle">5:38</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5hISmTJXBXdOes4htbUhGk?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">2</th>
+                <td class="col-2 align-middle">Wolf Totem</td>
+                <td class="col-2 align-middle">The Hu</td>
+                <td class="col-1 align-middle">5:38</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5hISmTJXBXdOes4htbUhGk?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="col-1 align-middle"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">3</th>
-                <td class="align-middle">Tren Tinh Ban Duoi Tinh Yeu</td>
-                <td class="align-middle">MIN</td>
-                <td class="align-middle">3:19</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5zH2inEP6THOY8tomr3DdZ?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">3</th>
+                <td class="col-2 align-middle">Tren Tinh Ban Duoi Tinh Yeu</td>
+                <td class="col-2 align-middle">MIN</td>
+                <td class="col-1 align-middle">3:19</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5zH2inEP6THOY8tomr3DdZ?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">4</th>
-                <td class="align-middle">Run Wild</td>
-                <td class="align-middle">PLS&TY</td>
-                <td class="align-middle">3:27</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6nMsrRnsNPzUF3Bv25mwyF?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">4</th>
+                <td class="col-2 align-middle">Run Wild</td>
+                <td class="col-2 align-middle">PLS&TY</td>
+                <td class="col-1 align-middle">3:27</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6nMsrRnsNPzUF3Bv25mwyF?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">5</th>
-                <td class="align-middle">Шум</td>
-                <td class="align-middle">Go_A</td>
-                <td class="align-middle">3:58</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3bghEsjRvDLVt6PE3Loc4G?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">5</th>
+                <td class="col-2 align-middle">Шум</td>
+                <td class="col-2 align-middle">Go_A</td>
+                <td class="col-1 align-middle">3:58</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3bghEsjRvDLVt6PE3Loc4G?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">6</th>
-                <td class="align-middle">Take Me Out</td>
-                <td class="align-middle">Franz Ferdinand</td>
-                <td class="align-middle">3:57</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/20I8RduZC2PWMWTDCZuuAN?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">6</th>
+                <td class="col-2 align-middle">Take Me Out</td>
+                <td class="col-2 align-middle">Franz Ferdinand</td>
+                <td class="col-1 align-middle">3:57</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/20I8RduZC2PWMWTDCZuuAN?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">7</th>
-                <td class="align-middle">Pompeii</td>
-                <td class="align-middle">Bastille</td>
-                <td class="align-middle">3:34</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3gbBpTdY8lnQwqxNCcf795?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">7</th>
+                <td class="col-2 align-middle">Pompeii</td>
+                <td class="col-2 align-middle">Bastille</td>
+                <td class="col-1 align-middle">3:34</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3gbBpTdY8lnQwqxNCcf795?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">8</th>
-                <td class="align-middle">PONPONPON</td>
-                <td class="align-middle">Kyary Pamyu Pamyu</td>
-                <td class="align-middle">4:02</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1c6C2wg7PRbPBRRUaEvheC?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">8</th>
+                <td class="col-2 align-middle">PONPONPON</td>
+                <td class="col-2 align-middle">Kyary Pamyu Pamyu</td>
+                <td class="col-1 align-middle">4:02</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1c6C2wg7PRbPBRRUaEvheC?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">9</th>
-                <td class="align-middle">Sweet Dreams Seven Nation Army Mashup</td>
-                <td class="align-middle">Pomplamoose & S.Douglass</td>
-                <td class="align-middle">2:33</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7kKJ0oMS6uiy8Pso2tRpFw?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">9</th>
+                <td class="col-2 align-middle">Sweet Dreams Seven Nation Army Mashup</td>
+                <td class="col-2 align-middle">Pomplamoose & S.Douglass</td>
+                <td class="col-1 align-middle">2:33</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7kKJ0oMS6uiy8Pso2tRpFw?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">10</th>
-                <td class="align-middle">Hurt</td>
-                <td class="align-middle">Johnny Cash</td>
-                <td class="align-middle">3:36</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/28cnXtME493VX9NOw9cIUh?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">10</th>
+                <td class="col-2 align-middle">Hurt</td>
+                <td class="col-2 align-middle">Johnny Cash</td>
+                <td class="col-1 align-middle">3:36</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/28cnXtME493VX9NOw9cIUh?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">11</th>
-                <td class="align-middle">Конь</td>
-                <td class="align-middle">Lyube</td>
-                <td class="align-middle">3:37</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5YGlD9W8hwcTrO2fP7vyhl?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">11</th>
+                <td class="col-2 align-middle">Конь</td>
+                <td class="col-2 align-middle">Lyube</td>
+                <td class="col-1 align-middle">3:37</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5YGlD9W8hwcTrO2fP7vyhl?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               
               <tr>
-                <th class="align-middle"scope="row">12</th>
-                <td class="align-middle">Derniere danse</td>
-                <td class="align-middle">Indila</td>
-                <td class="align-middle">3:33</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/65uoaqX5qcjXZRheAj1qQT?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">12</th>
+                <td class="col-2 align-middle">Derniere danse</td>
+                <td class="col-2 align-middle">Indila</td>
+                <td class="col-1 align-middle">3:33</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/65uoaqX5qcjXZRheAj1qQT?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">13</th>
-                <td class="align-middle">Don't Be Shy</td>
-                <td class="align-middle">Primary</td>
-                <td class="align-middle">3:26</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1z89ZFiUMLD6OvTfMwF7zp?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">13</th>
+                <td class="col-2 align-middle">Don't Be Shy</td>
+                <td class="col-2 align-middle">Primary</td>
+                <td class="col-1 align-middle">3:26</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1z89ZFiUMLD6OvTfMwF7zp?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">14</th>
-                <td class="align-middle">I Am The Best</td>
-                <td class="align-middle">2NE1</td>
-                <td class="align-middle">3:28</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/26EM9sZnQkLLQxixGd88KE?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">14</th>
+                <td class="col-2 align-middle">I Am The Best</td>
+                <td class="col-2 align-middle">2NE1</td>
+                <td class="col-1 align-middle">3:28</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/26EM9sZnQkLLQxixGd88KE?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">15</th>
-                <td class="align-middle">Bamboleo</td>
-                <td class="align-middle">Gipsy Kings</td>
-                <td class="align-middle">3:32</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4EveU9Zb50mjgi5avDNqlK?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">15</th>
+                <td class="col-2 align-middle">Bamboleo</td>
+                <td class="col-2 align-middle">Gipsy Kings</td>
+                <td class="col-1 align-middle">3:32</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4EveU9Zb50mjgi5avDNqlK?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">16</th>
-                <td class="align-middle">Genesis</td>
-                <td class="align-middle">Justice</td>
-                <td class="align-middle">3:54</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4wSmqFg31t6LsQWtzYAJob?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">16</th>
+                <td class="col-2 align-middle">Genesis</td>
+                <td class="col-2 align-middle">Justice</td>
+                <td class="col-1 align-middle">3:54</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4wSmqFg31t6LsQWtzYAJob?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr><tr>
-                <th class="align-middle"scope="row">17</th>
-                <td class="align-middle">Shelter</td>
-                <td class="align-middle">Porter Robinson</td>
-                <td class="align-middle">3:38</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2CgOd0Lj5MuvOqzqdaAXtS?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">17</th>
+                <td class="col-2 align-middle">Shelter</td>
+                <td class="col-2 align-middle">Porter Robinson</td>
+                <td class="col-1 align-middle">3:38</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2CgOd0Lj5MuvOqzqdaAXtS?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">18</th>
-                <td class="align-middle">Levan Polka</td>
-                <td class="align-middle">Aquabella</td>
-                <td class="align-middle">2:18</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3yIieRctUCgdUfDyk4adWX?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">18</th>
+                <td class="col-2 align-middle">Levan Polka</td>
+                <td class="col-2 align-middle">Aquabella</td>
+                <td class="col-1 align-middle">2:18</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3yIieRctUCgdUfDyk4adWX?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">19</th>
-                <td class="align-middle">Tunak Tunak Tun</td>
-                <td class="align-middle">Daler Mehndi</td>
-                <td class="align-middle">5:03</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/131yybV7A3TmC34a0qE8u8?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">19</th>
+                <td class="col-2 align-middle">Tunak Tunak Tun</td>
+                <td class="col-2 align-middle">Daler Mehndi</td>
+                <td class="col-1 align-middle">5:03</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/131yybV7A3TmC34a0qE8u8?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               <tr>
-                <th class="align-middle"scope="row">20</th>
-                <td class="align-middle">Iner Universe</td>
-                <td class="align-middle">Origa</td>
-                <td class="align-middle">4:53</td>
-                <td class="align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0UuMRmKDZSuSlUbTg5F3MG?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
+                <th class="col-1 align-middle" scope="row">20</th>
+                <td class="col-2 align-middle">Inner Universe</td>
+                <td class="col-2 align-middle">Origa</td>
+                <td class="col-1 align-middle">4:53</td>
+                <td class="col-5 align-middle"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0UuMRmKDZSuSlUbTg5F3MG?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></td>
                     <td class="align-middle col-1"><button type="button" class="btn btn-danger removeRowButton">X</button></td>
               </tr>
               
@@ -426,6 +458,12 @@
                 </div>
            
             </div>
+            <div class="d-flex justify-content-center my-4">                
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTrackModal">
+                    Add A Track
+                  </button>
+            </div>
+
         </div>
         <div class="container border mt-5" id="favs">
             <h2>Favorite Albums:</h2>
@@ -585,6 +623,36 @@
       </button>
 </div>
 
+<div class="modal fade" id="addTrackModal" tabindex="-1" aria-labelledby="addTrackModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add A Track</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-5 mx-2 pl-0">Track: </div>
+                <div class="col-5 mx-2 pl-0">Artist:</div>
+                <input id="trackNameInput" placeholder="Ex) In the End" class="col-5 mx-2">
+                <input id="artistNameInput" placeholder="Ex) Linkin Park" class="col-5 mx-2">
+                <div id="timeTag" class="col-5 mx-2 pl-0 invisible">Duration: </div>
+                <div id="embedTag" class="col-5 mx-2 pl-0 invisible">Embed Link:</div>
+                <input id="timeInput" placeholder="Ex) 3:36" class="col-5 mx-2 invisible">
+                <input id="embedInput" placeholder="Paste link here" class="col-5 mx-2 invisible">
+            </div>          
+        </div>
+        <div class="modal-footer">
+            <button type="button" id="spotifyButton" class="invisible btn btn-success"><i class="fa-brands fa-spotify"></i> &nbsp Search Spotify</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" id="addButton" class="invisible btn btn-primary">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <div class="container collapse" id="wall">
     <h2>Wall of Glory</h2>
@@ -703,12 +771,21 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 <script>
+    const addButton = document.querySelector("#addButton");
+    const trackNameInput = document.querySelector("#trackNameInput");
+    const artistNameInput = document.querySelector("#artistNameInput");
+    const timeInput = document.querySelector("#timeInput");
+    const embedInput = document.querySelector("#embedInput");
+    const embedTag = document.querySelector("#embedTag");
+    const timeTag = document.querySelector("#timeTag");
+    const spotifyButton = document.querySelector("#spotifyButton");
     const record = document.querySelector(".record");
     const enterButton = document.querySelector(".enterButton");
     const jumbotron = document.querySelector(".jumbotron");
     const body = document.querySelector("body");
     const jContainer = document.querySelector(".jContainer");
     const nav = document.querySelector("nav");
+    const table = $('#favTrackTable');
     const hideJumbo = function(){
         //body.classList.remove("overflow-hidden");
         nav.classList.remove("invisible");
@@ -729,44 +806,60 @@
         setTimeout(hideJumbo, 2000);
         
     }
-    /* const sizer = function(e){
-        e.target.classList.add("scrollBig3");
-        console.log(e.target.dataset.position + 1,e.target.dataset.position - 1)
-        matrix[parseInt(e.target.dataset.spot) + 1].classList.add("scrollBig2");
-        matrix[parseInt(e.target.dataset.spot) + 1].classList.add("scrollBig2");
-    }
-    const shrinker = function(e){
-        e.target.classList.remove("scrollBig3")
-    }
-    const matrix = document.querySelectorAll(".scrollBig");
-    let hoverScale = function(){
-        console.log(matrix);
-        const row1= []
-        row1.push(matrix[0],matrix[1],matrix[2],matrix[3],matrix[4],matrix[5]);
-        const row2= []
-        row2.push(matrix[6],matrix[7],matrix[8],matrix[9],matrix[10],matrix[11]);
-        const row3= []
-        row3.push(matrix[12],matrix[13],matrix[14],matrix[15],matrix[16],matrix[17]);
-        const row4= []
-        row4.push(matrix[18],matrix[19],matrix[20],matrix[21],matrix[22],matrix[23]);
-        const row5= []
-        row5.push(matrix[24],matrix[25],matrix[26],matrix[27],matrix[28],matrix[29]);
-        console.log("1",row1,"2",row2,"3",row3,"4",row4,"5",row5);
-        for(i=0; i<matrix.length;i++){
-            matrix[i].dataset.spot = i;
-            console.log(matrix[i].dataset.spot);
-            matrix[i].addEventListener("mouseover", sizer);
-            matrix[i].addEventListener("mouseleave", shrinker);
+    const showHideSpotify = function () {
+        if(trackNameInput.value !== "" && trackNameInput.value !== "Ex) In the End"  && artistNameInput.value !== "" && artistNameInput.value !== "Ex) Linkin Park"){
+            spotifyButton.classList.remove("invisible"); 
+        }else if(trackNameInput.value !== "" || trackNameInput.value !== "Ex) In the End"  || artistNameInput.value !== "" || artistNameInput.value !== "Ex) Linkin Park") {
+            spotifyButton.classList.add("invisible");
+            embedTag.classList.add("invisible"); 
+        timeTag.classList.add("invisible"); 
+        embedInput.classList.add("invisible"); 
+        timeInput.classList.add("invisible"); 
         }
+        console.log(trackNameInput.value, artistNameInput.value);
     }
-    hoverScale(); */   
+    const showHideAdd = function () {
+        if(trackNameInput.value !== "" && trackNameInput.value !== "Ex) In the End"  && artistNameInput.value !== "" && artistNameInput.value !== "Ex) Linkin Park" && timeInput.value !== "" && timeInput.value !== "Ex) 3:36" && embedInput.value !== "" && embedInput !== "Paste link here"){
+            addButton.classList.remove("invisible"); 
+        }else if(trackNameInput.value !== "" || trackNameInput.value !== "Ex) In the End"  || artistNameInput.value !== "" || artistNameInput.value !== "Ex) Linkin Park") {
+             addButton.classList.add("invisible");
+        }            
+    }
+    trackNameInput.onkeydown = function(){showHideSpotify()};
+    artistNameInput.onkeydown = function(){showHideSpotify()};
+    embedInput.onkeydown = function(){showHideAdd()};
+    timeInput.onkeydown = function(){showHideAdd()};
+    
+    spotifyButton.onclick = function(){
+        window.open(`https://open.spotify.com/search/${trackNameInput.value} ${artistNameInput.value}`);
+        embedTag.classList.remove("invisible"); 
+        timeTag.classList.remove("invisible"); 
+        embedInput.classList.remove("invisible"); 
+        timeInput.classList.remove("invisible"); 
+    };
 
+    const addATrack = function(){
+        const newTr = document.createElement("tr");
+        newTr.innerHTML = `
+        <th class="col-1 align-middle" scope="row">1</th>
+        <td class="col-2 align-middle">${trackNameInput.value}</td>
+        <td class="col-2 align-middle">${artistNameInput.value}</td>
+        <td class="col-1 align-middle">${timeInput.value}</td>
+        <td class="col-5 align-middle">${embedInput.value}</td>
+        <td class="col-1 align-middle "><button type="button" class="btn btn-danger removeRowButton">X</button></td>`;
+       document.querySelector("tbody").append(newTr);
+       resetRows()
+       alert(`${trackNameInput.value} added!`)
+       embedInput.value = "";
+       timeInput.value = "";
+       trackNameInput.value = "";
+       artistNameInput.value = "";
 
-let table = $('#favTrackTable');
-$(document).on('click', '.removeRowButton', function() {
-    console.log("click");
-    let counter=0;
-    $(this).closest('tr').remove();
+    }
+    addButton.addEventListener("click", addATrack);
+    
+const resetRows = function(){
+    let counter=0;    
     let trsEven = document.querySelectorAll("tr:nth-of-type(even)");
     let trsOdd = document.querySelectorAll("tr:nth-of-type(odd)");
     let trsAll = document.querySelectorAll("tr");
@@ -784,10 +877,12 @@ $(document).on('click', '.removeRowButton', function() {
         }
         counter++;
     }
+}
 
-    
-
-
+$(document).on('click', '.removeRowButton', function() {
+    console.log("click");
+    $(this).closest('tr').remove();
+    resetRows();
 });
    window.scrollTo({ top: 0, behavior: 'smooth' });
 </script>
